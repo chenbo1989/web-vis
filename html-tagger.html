@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 20;
+			}
+
+			.ent{
+				color: red;
+			}
+
+			.person{
+				color: red;
+			}
+
+			.org{
+				color: blue;
+			}
+			.loc{
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<p>【环球网报道 记者 付国豪】作为民进党内斗“蔡赖之争”的两方，台当局领导人蔡英文、台前“行政院长”赖清德都参加2020台湾地区领导人选举民进党党内初选。13日，民进党公布党内初选民调结果，蔡英文数据超过赖清德，赢得党内初选。截至13日中午，赖清德尚未对此进行回应。</p>
+			<p>综合台湾“中央社”等媒体6月13日报道，民进党2020党内初选民调数据中午公布，意欲争取连任的现任台当局领导人蔡英文以35.68%的支持度胜过赖清德的27.48%，以8个百分点的优势得到民进党2020台湾地区领导人参选提名。</p>
+			<p>蔡英文(图片来源：台媒)</p>
+		</div>
+
+		<script type="text/javascript" src="js/tagger.js"></script>
+		<script type="text/javascript">
+			let node = document.querySelector("#content")
+
+			let words = [
+				{id:'ent1', label: '民进党', type: 'org'},
+				{id:'ent2', label: '蔡英文', type: 'person'},
+				{id:'ent3', label:  '赖清德', type: 'person' },
+				{id: 'ent4', label: '台湾', type: 'loc'}
+			]
+
+			Tagger.tagBody(node, words, 'ent')
+			
+		</script>
+	</body>
+</html>
